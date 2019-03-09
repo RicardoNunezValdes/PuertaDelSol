@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "";
+}
+
+<div class="jumbotron">
+    <h1>Formularios de Admisión</h1>
+    <br />
+    <br />
+    <div class="row">
+        <div class="row">
+            <div class='col-sm-3'>
+                <div class="form-group">
+                    <p><a href="@Url.Action("MedicinaClinica", "MedicinaClinica")" class="btn btn-primary btn-lg">Inf. Medica-Clínica</a></p>
+                </div>
+            </div>
+            <div class='col-sm-3'>
+                <div class="form-group">
+                    <p><a href="@Url.Action("Index", "Cuentas")" class="btn btn-primary btn-lg">En construcción</a></p>
+                </div>
+            </div>
+            <div class='col-sm-2'>
+                <div class="form-group">
+                    <p><a href="@Url.Action("Index","Presupuesto")" class="btn btn-primary btn-lg">En construcción</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-4">
+         @*@Html.DropDownList( new[] {new SelectListItem() {Text = "Yes, I'll be there",Value = bool.TrueString} })*@
+    </div>
+        @*<div class='col-sm-3'>
+            <br />
+            <div class="form-group">
+                <input action="action" onclick="Cuentas()" ; return false;" type="button" value="" class="btn btn-danger btn-lg" />
+            </div>
+        </div>*@
+
+
+    @*</div>*@
+</div>

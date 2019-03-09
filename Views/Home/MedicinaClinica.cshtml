@@ -1,0 +1,64 @@
+﻿MedicinaClinica@model AdmisionPS.Models.A_PACIENTE
+
+@{
+    ViewBag.Title = "";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <div class="container" style="width: inherit;width: 80%; margin:0 auto; text-align: center;">
+            <h3>ENTREGA A FONASA - ISAPRES Y OTROS ASEGURADORES</h3>
+
+            <h3> INFORMACIÓN MEDICA Y REGISTROS CLÍNICOS</h3>
+
+        </div>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.P_RUTPACIENTE,"RUT", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.P_RUTPACIENTE, new { htmlAttributes = new { @class = "form-control", @placeholder = "Rut del Paciente" } })
+                @Html.ValidationMessageFor(model => model.P_RUTPACIENTE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.P_NOMBRE,"Nombre", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.P_NOMBRE, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nombre" } })
+                @Html.ValidationMessageFor(model => model.P_NOMBRE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.P_PATERNO,"Apellido Paterno", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.P_PATERNO, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido Paterno" } })
+                @Html.ValidationMessageFor(model => model.P_PATERNO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.P_MATERNO,"Apellido Materno", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.P_MATERNO, new { htmlAttributes = new { @class = "form-control", @placeholder = "Apellido Materno"  } })
+                @Html.ValidationMessageFor(model => model.P_MATERNO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="width: 100%; margin:0 auto; text-align: center;">
+                <input type=" submit" value="Imprimir" class="btn  btn-success " />
+            </div>
+        </div>
+    </div>
+}
+
+
